@@ -9,13 +9,13 @@ class Grid {
         return Array(this.size).fill(null).map(() => Array(this.size).fill('~'));
     }
 
-    placeShip() {
+    placeShip(ship) {
         ship.positions.forEach(pos => {
             this.grid[pos.x][pos.y] = ship;
         });
     }
 
-    fireShot() {
+    fireShot(x, y) {
         if (typeof this.grid[x][y] === 'object') {
             const ship = this.grid[x][y];
             this.grid[x][y] = 'X';
