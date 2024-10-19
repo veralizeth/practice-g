@@ -23,7 +23,7 @@ class Grid {
             return ship;
         } else if (this.grid[x][y] === "~") {
             console.log('Miss!');
-            this.grid[x][y] === 'O'
+            this.grid[x][y] = 'O'
             return null;
         } else {
             console.log('You already fire here!');

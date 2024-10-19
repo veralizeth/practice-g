@@ -43,7 +43,7 @@ class BattleshipGame {
                     this.askForShot();
                 } else {
                     console.log('You sank all the ships! You win!');
-                    rl.close;
+                    rl.close();
                 }
             } else {
                 console.log('Invalid Input. Please enter valid coordinates');
