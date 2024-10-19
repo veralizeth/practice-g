@@ -1,5 +1,5 @@
 class Ship {
-    constructor(name, size){
+    constructor(name, size) {
         this.name = name;
         this.size = size;
         this.hitsRemaining = size;
@@ -10,14 +10,14 @@ class Ship {
         this.positions = positions;
     }
 
-    hit(){
-        if(this.hitsRemaining > 0) {
+    hit() {
+        if (this.hitsRemaining > 0) {
             this.hitsRemaining -= 1;
             console.log(`${this.name} was hit`);
         }
     }
 
-    isDestroyed(){
+    isDestroyed() {
         return this.hitsRemaining === 0;
     }
 }

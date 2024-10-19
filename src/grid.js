@@ -1,27 +1,27 @@
 class Grid {
     constructor(size) {
-        this.size = size; 
-        this.grid = this.createGrid(); 
+        this.size = size;
+        this.grid = this.createGrid();
     }
 
-    createGrid(){
+    createGrid() {
         // "~" Represents water.
-        return Array(this.size).fill(null).map(()=> Array(this.size).fill('~'));
+        return Array(this.size).fill(null).map(() => Array(this.size).fill('~'));
     }
 
     placeShip() {
         ship.positions.forEach(pos => {
-            this.grid[pos.x][pos.y] = ship; 
+            this.grid[pos.x][pos.y] = ship;
         });
     }
 
     fireShot() {
-        if(typeof this.grid[x][y] === 'object') {
+        if (typeof this.grid[x][y] === 'object') {
             const ship = this.grid[x][y];
-            this.grid[x][y] = 'X'; 
-            console.log('Hit!'); 
-            return ship; 
-        } else if(this.grid[x][y] === "~") {
+            this.grid[x][y] = 'X';
+            console.log('Hit!');
+            return ship;
+        } else if (this.grid[x][y] === "~") {
             console.log('Miss!');
             this.grid[x][y] === 'O'
             return null;
@@ -34,7 +34,7 @@ class Grid {
     printGrid() {
         console.log('This is your board:');
         this.grid.forEach(row => {
-            console.log(row.map( cell => (typeof cell === 'object' ? '~': cell)).join(' '));
+            console.log(row.map(cell => (typeof cell === 'object' ? '~' : cell)).join(' '));
         })
     }
 
