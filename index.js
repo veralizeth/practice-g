@@ -8,7 +8,6 @@ const ships = [
 ]
 
 // Set Possitions:
-
 ships[0].setPosition([{ x: 1, y: 1 }, { x: 1, y: 2 }]);
 ships[1].setPosition([{ x: 3, y: 0 }, { x: 3, y: 1 }, { x: 3, y: 2 }]);
 
